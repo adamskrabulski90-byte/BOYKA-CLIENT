@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "boyka_client",
+  "version": "${version}",
+  "name": "Boyka Client",
+  "description": "Client-side visual HUD and settings screen for Minecraft 1.21.4.",
+  "authors": ["Boyka"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["pl.boyka.client.BoykaClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "1.21.4",
+    "java": ">=21"
+  }
+}
