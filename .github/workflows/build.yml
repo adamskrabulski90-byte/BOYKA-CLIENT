@@ -18,13 +18,16 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Instalacja Gradle 8.11.1
+      - name: Instalacja Gradle
         uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: '8.11.1'
 
+      - name: Sprawdzenie wersji Gradle
+        run: gradle --version
+
       - name: Budowanie moda
-        run: gradle build
+        run: gradle build --no-daemon
 
       - name: Prześlij plik JAR
         uses: actions/upload-artifact@v4
